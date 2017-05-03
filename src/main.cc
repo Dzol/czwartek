@@ -35,14 +35,15 @@ class Stack {
 
 int main () {
 
-  Stack fu;
-  fu.inspect();
+  Stack s;
+  s.inspect();
 
-  fu.push(2);
-  fu.inspect();
+  s.push(2);
+  s.inspect();
 
-  fu.pop();
-  fu.inspect();
+  if (2 != s.pop())
+    return 1;
+  s.inspect();
   
   return 0;
 }
