@@ -9,15 +9,21 @@ class Stack {
   int i;
   int a[SIZE];
 
+  void size() {
+    std::cout << "<" << i << ">"; }
+
+  void element(int i) {
+    std::cout << " " << a[i]; }
+
  public:
 
   Stack() : i(0) {}
 
   void inspect() {
-    printf("<%i>", i);
-    for (int x = 0; x < i; ++x)
-      printf(" %i", a[x]);
-    printf("\n"); }
+    size();
+    for (int j = 0; j < i; ++j)
+      element(j);
+    std::cout << "\n"; }
 
   void push (int x) {
     if (i < SIZE)
